@@ -20,10 +20,12 @@ app.get('/restaurants', mainCtrl.getRestaurants)
 app.get('/restaurants/:name', mainCtrl.getRestaurantName)
 app.put('/name', mainCtrl.updateName)
 app.put('/location', mainCtrl.updateLocation)
-app.post('/hobbies', mainCtrl.addHobbie)
+app.post('/hobbies', mainCtrl.addHobby)
 app.post('./occupations', mainCtrl.addOccupation)
 app.post('./family', mainCtrl.addFamilyMember)
 app.post('./restaurants', mainCtrl.addRestaurant)
+app.get('/skillz', mainCtrl.getSkillz)
+app.post('/skillz', middleware.generateId, mainCtrl.addSkillz)
 
 
 
