@@ -1,5 +1,6 @@
 const user = require('../user.js');
 const skillz = require('../skillz');
+const secrets = require('../superSecret');
 
 
 module.exports = {
@@ -149,5 +150,8 @@ module.exports = {
       skillz.push(newSkill)
       return res.status(200).json(skillz)
 
+    },
+    getSecrets: (req, res, next) => {
+      res.status(200).json(secrets)
     }
 }

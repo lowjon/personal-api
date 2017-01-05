@@ -26,6 +26,7 @@ app.post('./family', mainCtrl.addFamilyMember)
 app.post('./restaurants', mainCtrl.addRestaurant)
 app.get('/skillz', mainCtrl.getSkillz)
 app.post('/skillz', middleware.generateId, mainCtrl.addSkillz)
+app.get('/secrets/:username/:pin', middleware.verifyUser, mainCtrl.getSecrets)
 
 
 

@@ -18,5 +18,13 @@ module.exports = {
       req.body.id = skillz.length + 1;
       console.log(req.body.id);
       next();
+    },
+    verifyUser: (req, res, next) => {
+      if (req.params.username == 'lowjon' && req.params.pin == 666){
+        return next()
+      } else{
+        console.log('stop intruder!');
+        res.status(403).json('eff you!')
+      }
     }
   }
